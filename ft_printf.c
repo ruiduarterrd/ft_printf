@@ -6,7 +6,7 @@
 /*   By: ruirodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 19:43:15 by ruirodri          #+#    #+#             */
-/*   Updated: 2023/11/14 21:20:20 by ruirodri         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:52:36 by ruirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
+/*
 int main(void)
 {
     char s[] = "Hello, World!";
@@ -98,3 +99,4 @@ int main(void)
     printf("count: %d\n\n", count2);
     return (0);
 }
+*/
