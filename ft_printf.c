@@ -6,7 +6,7 @@
 /*   By: ruirodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 19:43:15 by ruirodri          #+#    #+#             */
-/*   Updated: 2023/11/16 16:32:01 by ruirodri         ###   ########.fr       */
+/*   Updated: 2023/11/20 09:13:44 by ruirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_printf(const char *format, ...)
 /*
 int main(void)
 {
-    char s[] = "Hello, World!";
+    char s[] = "";
     void *p = (void *)0x12345678;
     int d = -42;
     int i = 1;

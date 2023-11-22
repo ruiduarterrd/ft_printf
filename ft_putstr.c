@@ -6,7 +6,7 @@
 /*   By: ruirodri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:48:52 by ruirodri          #+#    #+#             */
-/*   Updated: 2023/11/14 21:11:51 by ruirodri         ###   ########.fr       */
+/*   Updated: 2023/11/20 09:12:55 by ruirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ int	ft_putstr(const char *num)
 	int	count;
 
 	count = 0;
+	if (!num)
+	{
+		count += write(1, "(null)", 6);
+		return (count);
+	}
 	while (*num)
 		count += write(1, num++, 1);
 	return (count);
