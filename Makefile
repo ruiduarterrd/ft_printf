@@ -1,16 +1,14 @@
 NAME = libftprintf.a
 
 # Add more files to sources
-SRCS = ft_putchr.c \
-		ft_putstr.c \
-		ft_itoa.c \
-		ft_putnbr.c \
-		ft_countdigits.c \
-		ft_utoa.c \
-		ft_hextoa.c \
-		ft_ptoa.c \
+SRCS = ft_printf.c \
 		ft_format.c \
-		ft_printf.c
+		ft_print_char.c \
+		ft_print_string.c \
+		ft_print_int.c \
+		ft_print_hex.c \
+		ft_print_pointer.c \
+		ft_print_uint.c
 
 # Use same files from sources, but change .c to .o
 OFILES = ${SRCS:.c=.o}

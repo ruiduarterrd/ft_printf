@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruirodri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ruirodri < ruirodri@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 20:48:52 by ruirodri          #+#    #+#             */
-/*   Updated: 2023/11/20 09:12:55 by ruirodri         ###   ########.fr       */
+/*   Created: 2023/12/13 06:22:33 by ruirodri          #+#    #+#             */
+/*   Updated: 2023/12/17 18:59:23 by ruirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(const char *num)
+int	ft_print_int(int n)
 {
-	int	count;
+	long int	num;
+	int			count;
 
+	num = n;
 	count = 0;
-	if (!num)
+	if (num < 0)
 	{
-		count += write(1, "(null)", 6);
-		return (count);
+		ft_print_char('-');
+		count++;
+		num = -num;
 	}
-	while (*num)
-		count += write(1, num++, 1);
+	if (num >= 10)
+		count += ft_print_int(num / 10);
+	ft_print_char('0' + num % 10);
+	count++;
 	return (count);
 }

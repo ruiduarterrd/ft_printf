@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countdigits.c                                   :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruirodri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ruirodri < ruirodri@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 20:50:38 by ruirodri          #+#    #+#             */
-/*   Updated: 2023/11/14 21:02:10 by ruirodri         ###   ########.fr       */
+/*   Created: 2023/11/14 20:48:19 by ruirodri          #+#    #+#             */
+/*   Updated: 2023/12/17 18:58:38 by ruirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_countdigits(unsigned int num, int base)
+int	ft_print_char(int c)
 {
-	int	len;
-
-	len = 0;
-	while (num != 0)
-	{
-		num /= base;
-		len++;
-	}
-	return (len);
+	return (write(1, &c, 1));
 }

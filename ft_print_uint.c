@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_printf_uint.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruirodri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ruirodri < ruirodri@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 20:50:06 by ruirodri          #+#    #+#             */
-/*   Updated: 2023/11/14 21:02:33 by ruirodri         ###   ########.fr       */
+/*   Created: 2023/12/13 06:49:29 by ruirodri          #+#    #+#             */
+/*   Updated: 2023/12/13 07:17:16 by ruirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_print_uint(unsigned int n)
 {
-	int		len;
-	char	*num;
+	int	count;
 
-	num = ft_itoa(n);
-	len = ft_putstr(num);
-	free(num);
-	return (len);
+	count = 0;
+	if (n >= 10)
+		count += ft_print_uint(n / 10);
+	ft_print_char('0' + n % 10);
+	count++;
+	return (count);
 }

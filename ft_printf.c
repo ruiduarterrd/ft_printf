@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruiduarte.rrd <ruiduarte.rrd@student.42    +#+  +:+       +#+        */
+/*   By: ruirodri < ruirodri@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 19:43:15 by ruirodri          #+#    #+#             */
-/*   Updated: 2023/11/30 19:49:20 by ruiduarte.r      ###   ########.fr       */
+/*   Created: 2023/12/13 05:02:51 by ruiduarte.r       #+#    #+#             */
+/*   Updated: 2023/12/17 12:32:14 by ruirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 		{
-			ft_putchr(*format);
+			ft_print_char(*format);
 			count++;
 		}
 		format++;
@@ -37,7 +37,7 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-int main(void)
+/* int main(void)
 {
 	char c = 'c';
 	char s[] = "ola %%";
@@ -90,7 +90,7 @@ int main(void)
 	count = printf("%i", i);
 	printf("        \n\t\t   COUNT -> %d\n", count);
 	// FT_PRINTF -> %i
-	ft_printf("FORMAT = 'p'\n\tFT_PRINTF OUTPUT -> ");
+	ft_printf("FORMAT = 'i'\n\tFT_PRINTF OUTPUT -> ");
 	count = ft_printf("%i", i);
 	ft_printf("        \n\t\t   COUNT -> %d\n", count);
 
@@ -131,3 +131,4 @@ int main(void)
 	ft_printf("        \n\t\t   COUNT -> %d\n", count);
 	return (0);
 }
+*/

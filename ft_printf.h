@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruirodri <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ruirodri < ruirodri@student.42lisboa.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 20:42:46 by ruirodri          #+#    #+#             */
-/*   Updated: 2023/11/20 08:47:24 by ruirodri         ###   ########.fr       */
+/*   Updated: 2023/12/17 19:23:13 by ruirodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,14 @@
 # include <unistd.h>
 # include <stdarg.h>
 # include <stdio.h>
+# include <limits.h>
 
-int		ft_putchr(int c);
-int		ft_putstr(const char *num);
-char	*ft_itoa(int n);
-int		ft_putnbr(int n);
-int		ft_countdigits(unsigned int num, int base);
-int		ft_utoa(unsigned int n);
-int		ft_hextoa(unsigned int n, const char *base);
-int		ft_ptoa(unsigned long int n, const char *base);
-int		ft_format(const char *format, va_list args);
-int		ft_printf(const char *format, ...);
-
+int	ft_printf(const char *format, ...);
+int	ft_format(const char *format, va_list args);
+int	ft_print_char(int c);
+int	ft_print_string(char *str);
+int	ft_print_int(int n);
+int	ft_print_hex(unsigned long long n, int base);
+int	ft_print_pointer(void *ptr);
+int	ft_print_uint(unsigned int n);
 #endif
